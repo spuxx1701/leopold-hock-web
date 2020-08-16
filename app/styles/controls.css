@@ -1,0 +1,81 @@
+@media (max-width: 479px) {
+    .big-button-container {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 480px) {
+    .big-button-container {
+        flex-direction: row;
+    }
+}
+
+.big-button-container {
+    display: flex;
+}
+
+.big-button {
+    width: 100px;
+    height: 100px;
+    display: grid;
+    align-items: center;
+    border: 1px solid var(--colorBrandDark);
+    border-radius: 2px;
+    background: none;
+    box-shadow: 1px 2px var(--colorBrandDark);
+    color: var(--colorBrandDark);
+    transition: 500ms;
+    margin: 10px;
+    padding: 10px;
+}
+
+.big-button * {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+.big-button:hover, .big-button:active {
+    border-color: var(--colorBrand);
+    color: var(--colorBrand);
+    box-shadow: 5px 10px var(--colorBrandMedium);
+}
+
+.separator {
+    height: 1px;
+    width: 400px;
+    max-width: 90%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    background-color: var(--colorBrand);
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Raleway';
+}
+
+h4 {
+    text-align: center;
+    font-size: 20px;
+    color: var(--colorBrand)
+}
+
+h5 {
+    text-align: center;
+    font-size: 16px;
+    color: var(--colorBrandMedium)
+}
+
+h6 {
+    text-align: center;
+    color: var(--colorBrandDark);
+    font-size: 10px;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.5rem;
+}
+
+p {
+    color: var(--colorGreyBright);
+    font-size: 14px;
+}

@@ -1,0 +1,24 @@
+.h-box {
+    display: flex;
+    align-items: center;
+}
+
+.h-box-item {
+    display: flex;
+    float: left;
+    height: 100%;
+    align-items: center;
+}
+
+.v-box {
+    height: 100%;
+}
+
+.h-box-item {
+    display: flex;
+    margin-bottom: 5px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    justify-content: space-between;
+}
