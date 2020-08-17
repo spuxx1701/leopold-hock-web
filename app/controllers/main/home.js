@@ -17,6 +17,7 @@ export default class HomeController extends Controller {
     init() {
         super.init();
         that = this;
+        that.manager.set("homeController", this);
         that.initializeAnimatedHeader();
     }
 

@@ -2,7 +2,7 @@
     vertical-align: middle;
     --colorGreyBright: rgb(200, 200, 200);
     --colorGreyDark: #252525;
-    --colorAppBackground: #0e1015;
+    --colorAppBackground: #454545;
     --colorHeaderBackground: #454545;
     --colorBrand: #00FFFF;
     --colorBrandMedium: #64C8C8;
@@ -47,7 +47,7 @@
 }
 
 .footer-toolbar {
-    background-color: var(--colorHeaderBackground);
+    padding-top: 15px;
     box-shadow: 6px 0px 0px 0px rgba(0, 0, 0, 0.4);
     display: grid;
     justify-content: center;

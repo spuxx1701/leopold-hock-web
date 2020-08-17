@@ -14,5 +14,8 @@ export default class MainController extends Controller {
     onHeaderButtonClick(routeName) {
         this.manager.goToRoute("main." + routeName);
         window.scrollTo(0, 0);
+        if (routeName === "home") {
+            this.manager.homeController.initializeAnimatedHeader();
+        }
     }
 }
