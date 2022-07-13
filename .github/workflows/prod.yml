@@ -26,7 +26,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: spuxx
+          context: .
           push: true
           tags: spuxx/${{env.project_name}}/${{env.environment}}:latest
 
