@@ -5,8 +5,9 @@ on:
       - master
 
 env:
-  # Change the project name so image can be identified properly.
-  project_name: leopold-hock-web
+  docker_user: spuxx
+  # Change the repository name so image can be identified properly.
+  docker_repository: leopold-hock-web
   environment: production
 
 jobs:
@@ -15,6 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
+      - name: Prepare
+        run: DOCKER_IMAGE=${{env.docker_user}}/${{env.docker_repository}}
       - name: Set up Docker Buildx
         id: buildx
         uses: docker/setup-buildx-action@v2
