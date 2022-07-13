@@ -27,7 +27,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: spuxx/${{env.project_name}}/${{env.environment}}:latest
+          tags: ${{env.environment}}:latest
 
   # deploy:
   #   runs-on: ubuntu-latest
