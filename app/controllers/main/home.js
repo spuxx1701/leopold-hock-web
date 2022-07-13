@@ -2,7 +2,7 @@ import Controller from '@ember/controller';
 import { inject as service } from '@ember/service';
 var that;
 
-var textArray = ["Developing Software.", "Enhancing SAP.", "Making Games.", "Educating People."];
+var textArray = ["Developing software.", "Enhancing the web.", "Designing scalable systems.", "Educating People."];
 var typingDelay = 200;
 var erasingDelay = 100;
 var newTextDelay = 2000; // Delay between current and next text
