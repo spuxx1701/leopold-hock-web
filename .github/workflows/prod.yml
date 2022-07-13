@@ -1,10 +1,11 @@
-name: CI
+name: production
 on:
   push:
     branches:
       - master
 
 env:
+  # Change the project name so image can be identified properly.
   project_name: leopold-hock-web
   environment: production
 
