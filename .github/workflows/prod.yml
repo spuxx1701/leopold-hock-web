@@ -6,8 +6,7 @@ on:
 
 env:
   docker_user: spuxx
-  # Change the repository name so image can be identified properly.
-  docker_repository: leopold-hock-web
+  repository_name: leopold-hock-web
   environment: production
 
 jobs:
@@ -30,5 +29,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: spuxx/test:latest
-          # tags: ${{env.environment}}:latest
+          tags: spuxx/${{env.repository_name}}${{env.environment}}/:latest
