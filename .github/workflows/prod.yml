@@ -7,7 +7,7 @@ on:
 env:
   docker_user: spuxx
   repository_name: leopold-hock-web
-  environment: production
+  environment: prod
 
 jobs:
 
