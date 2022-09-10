@@ -16,5 +16,6 @@ jobs:
       token: ${{ secrets.DOCKERHUB_TOKEN }}
       ssh_host: ${{ secrets.SSH_HOST }}
       ssh_username: ${{ secrets.SSH_USERNAME }}
+      ssh_password: ${{ secrets.SSH_PASSWORD }}
       ssh_key: ${{ secrets.SSH_KEY }}
       ssh_passphrase: ${{ secrets.SSH_PASSPHRASE }}
