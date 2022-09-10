@@ -4,7 +4,6 @@ COPY ./ ./
 RUN npm ci && npm run build
 
 FROM nginx:alpine
-USER nginx
 COPY ./.nginx/nginx.conf /etc/nginx/nginx.conf
 RUN rm -rf /usr/share/nginx/html/*
 COPY --from=build /usr/app/dist /usr/share/nginx/html
