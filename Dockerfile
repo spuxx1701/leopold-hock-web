@@ -9,5 +9,5 @@ COPY ./.nginx/nginx.conf /etc/nginx/nginx.conf
 RUN rm -rf /usr/share/nginx/html/*
 COPY --from=build /usr/app/dist /usr/share/nginx/html
 EXPOSE 8080
-USER nginx
+USER 101
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
