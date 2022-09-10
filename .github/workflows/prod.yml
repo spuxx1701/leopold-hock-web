@@ -6,18 +6,15 @@ on:
       - master
 
 jobs:
-  docker_build_and_push:
-    uses: spuxx1701/ci/.github/workflows/docker_build_and_push.yml@v1.0
+  docker_deploy:
+    uses: spuxx1701/ci/.github/workflows/docker_deploy.yml@v1.1
     with:
       username: spuxx
       repository: leopold-hock-web
       environment: production
     secrets:
       token: ${{ secrets.DOCKERHUB_TOKEN }}
-
-  finish:
-    needs: docker_build_and_push
-    runs-on: ubuntu-latest
-    steps:
-      - id: log
-        run: echo ${{ needs.docker_push.outputs.tags }}
+      ssh_host: ${{ secrets.SSH_HOST }}
+      ssh_username: ${{ secrets.SSH_USERNAME }}
+      ssh_key: ${{ secrets.SSH_KEY }}
+      ssh_passphrase: ${{ secrets.SSH_PASSPHRASE }}
